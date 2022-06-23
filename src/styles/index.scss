@@ -1,0 +1,98 @@
+@import "./reset.scss";
+@import "./variables.scss";
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: var(--poppins);
+    background-color: var(--color-bg);
+    color: var(--white);
+    line-height: 1.7;
+    background-image: url(../assets/bg-texture.png);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#root {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    min-height: 100vh;
+    padding: 3rem 0rem;
+    h2,
+    h5 {
+        text-align: center;
+        color: var(--color-light);
+    }
+    h2 {
+        color: var(--color-primary);
+        margin-bottom: 3rem;
+        @include breakpoint(sm) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+    &:hover {
+        color: var(--white);
+    }
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--color-bg);
+        border-color: transparent;
+    }
+}
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}

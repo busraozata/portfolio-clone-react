@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+#about {
+    min-height: 50vh;
+    .about__me {
+        width: 100%;
+        border-radius: 2rem;
+        background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+        display: grid;
+        place-items: center;
+        aspect-ratio: 1/1;
+
+        @include breakpoint(lg) {
+            width: 50%;
+            margin: 2rem auto;
+        }
+        @include breakpoint(sm) {
+            width: 70%;
+            margin: 2rem auto;
+        }
+
+        .about__me-image {
+            border-radius: 2rem;
+            overflow: hidden;
+            transform: rotate(10deg);
+            transition: var(--transition);
+            &:hover {
+                transform: rotate(0);
+            }
+        }
+    }
+    .about__card {
+        background-color: var(--color-bg-variant);
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: var(--transition);
+        @include breakpoint(lg) {
+            margin-top: 2rem;
+        }
+        &:hover {
+            background-color: transparent;
+            border-color: var(--color-primary-variant);
+            cursor: default;
+        }
+        .about__icon {
+            color: var(--color-primary);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        h5 {
+            font-size: 0.95rem;
+        }
+        small {
+            font-size: 0.7rem;
+            color: var(--color-light);
+        }
+    }
+
+    .about__content {
+        p {
+            margin: 2rem 0rem 2.6rem;
+            color: var(--color-light);
+            font-size: 0.9rem;
+        }
+    }
+}

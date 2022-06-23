@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+:root {
+    --poppins: "Poppins", sans-serif;
+    --black: #000;
+    --white: #fff;
+    --color-bg: #1f1f38;
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-light: rgba(255, 255, 255, 0.6);
+    --transition: all 400ms ease;
+}
+
+//responsive breakpoints
+@mixin breakpoint($size) {
+    @if $size == sm {
+        @media (max-width: 600px) {
+            @content;
+        }
+    } @else if $size == md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $size == lg {
+        @media (max-width: 991px) {
+            @content;
+        }
+    } @else if $size == xl {
+        @media (max-width: 1200px) {
+            @content;
+        }
+    } @else if $size == xxl {
+        @media (max-width: 1400px) {
+            @content;
+        }
+    }
+}
